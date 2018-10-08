@@ -8,3 +8,10 @@ class Constants {
     const val SHARED_PREFERENCE = "SAUDI_ASSOCIATION "
   }
 }
+
+class StateConstants{
+  companion object {
+    const val BUTTON_LOADING = 30
+    const val BUTTON_ERROR = 30
+  }
+}

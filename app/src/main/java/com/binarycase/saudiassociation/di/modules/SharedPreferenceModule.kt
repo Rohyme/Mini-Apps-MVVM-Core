@@ -4,7 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.binarycase.saudiassociation.myApp.MyApplication
 import com.binarycase.saudiassociation.appUtils.Constants
-import com.binarycase.saudiassociation.appUtils.SharedPreferenceUtil
+import com.binarycase.saudiassociation.appUtils.deviceUtils.SharedPreferenceUtil
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -19,7 +20,7 @@ class SharedPreferenceModule {
 
   @Provides
   @Singleton
-  fun provideSharedPreferenceUtil(sharedPreference: SharedPreferences): SharedPreferenceUtil {
-    return SharedPreferenceUtil(sharedPreference)
+  fun provideSharedPreferenceUtil(sharedPreference: SharedPreferences ,gson : Gson): SharedPreferenceUtil {
+    return SharedPreferenceUtil(sharedPreference, gson)
   }
 }
