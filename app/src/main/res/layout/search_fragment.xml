@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.piotrek.customspinner.CustomSpinner
+        android:id="@+id/startTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:background="@drawable/spinner_bg"
+        app:layout_constraintBottom_toTopOf="@+id/endTo"
+        app:layout_constraintEnd_toStartOf="@+id/startImage"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <ImageView
+        android:id="@+id/startImage"
+        android:layout_width="28dp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_start_marker"
+        app:layout_constraintBottom_toBottomOf="@+id/startTo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/startTo" />
+
+
+    <com.piotrek.customspinner.CustomSpinner
+        android:id="@+id/endTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/spinner_bg"
+        app:layout_constraintBottom_toTopOf="@+id/searchBt"
+        app:layout_constraintEnd_toStartOf="@+id/startImage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTo" />
+
+
+    <ImageView
+        android:id="@+id/endImage"
+        android:layout_width="28dp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_end_marker"
+        app:layout_constraintBottom_toBottomOf="@+id/endTo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/endTo" />
+
+
+    <Button
+        android:id="@+id/searchBt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/search_bg"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toTopOf="@+id/newAddress"
+        app:layout_constraintEnd_toEndOf="@+id/newAddress"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/newAddress"
+        app:layout_constraintWidth_percent=".4" />
+
+    <Button
+        android:id="@+id/newAddress"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginBottom="132dp"
+        android:background="@drawable/search_bg"
+        android:text="@string/new_address"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".4" />
+
+
+</android.support.constraint.ConstraintLayout>

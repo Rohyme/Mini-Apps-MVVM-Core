@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+
+        android:gravity="center"
+        android:text="من فضلك ادخل العنوان المراد اضافته ورقم هاتفك ليتم التواصل مع عن طريق whatsApp"
+        />
+    <EditText
+        android:id="@+id/place_from"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@drawable/textfield_bg"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:hint="@string/start_place"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/place_to"
+        android:background="@drawable/textfield_bg"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:gravity="center"
+        android:hint="@string/end_place"
+        />
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:background="@drawable/textfield_bg"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:hint="رقم الهاتف"
+        android:inputType="phone"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/doneBt"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:text="تم"
+        android:background="@drawable/search_bg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_36sdp"
+        android:layout_marginBottom="1dp"
+        />
+
+</LinearLayout>
+</ScrollView>
