@@ -21,8 +21,8 @@ class SearchFragmentViewModel @Inject constructor(val useCase : GetAddressDetail
     }
 
     fun fetchAddressDetails(startId: String, endId: String) {
-        useCase.execute(object :SingleObserver<AddressDetailsResponse>{
-            override fun onSuccess(t: AddressDetailsResponse) {
+        useCase.execute(object :SingleObserver<List<AddressDetailsResponse>>{
+            override fun onSuccess(t: List<AddressDetailsResponse>) {
                 addressDetailsObs.postValue(StateView.Success(t))
             }
 

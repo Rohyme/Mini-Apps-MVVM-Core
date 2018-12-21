@@ -33,12 +33,9 @@ class MainActivity : BaseActivityWithInjector() {
             when (it) {
                 is StateView.Success<*> -> {
                     fragmentContainer.setState(StatesConstants.NORMAL_STATE)
-
                     val data = it.data as List<AddresseModel>
                     val searchFragment = SearchFragment.instance(data)
                     supportFragmentManager.beginTransaction().addToBackStack(null).add(R.id.fragmentContainer, searchFragment).commit()
-
-//                    FragmentUtils.replace(supportFragmentManager,)
                 }
 
                 is StateView.Loading -> {
@@ -55,11 +52,14 @@ class MainActivity : BaseActivityWithInjector() {
         })
     }
 
-    fun openDetailsFragment(data: AddressDetailsResponse) {
-        val addressesString = data.addressDetails.map {
-            it.address
+    fun openDetailsFragment(data: List<AddressDetailsResponse>) {
+        val addressesString = ArrayList<String>()
+        data.forEach {
+          addressesString .addAll(it.addressDetails.map {addressDetails->
+              addressDetails.address
+          })
         }
-        val detailsFragment = AddressDetailsFragment.instance(ArrayList(addressesString))
+        val detailsFragment = AddressDetailsFragment.instance(addressesString)
         supportFragmentManager.beginTransaction().addToBackStack(null).replace(R.id.fragmentContainer, detailsFragment).commit()
     }
 

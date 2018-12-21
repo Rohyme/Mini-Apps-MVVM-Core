@@ -7,10 +7,8 @@ import com.rohyme.aro7ezai.domain.interactors.SingleUseCase
 import io.reactivex.Single
 import javax.inject.Inject
 
-class GetAddressDetailsUseCase @Inject constructor(private val api :ApiService) : SingleUseCase<AddressDetailsResponse, AddressDetailsRequest>() {
-    override fun buildUseCaseObservable(params: AddressDetailsRequest?): Single<AddressDetailsResponse> {
-    return api.getAddressDetails(params!!.placeFromId,params.placeToId).map {
-        it[0]
-    }
+    class GetAddressDetailsUseCase @Inject constructor(private val api :ApiService) : SingleUseCase<List<AddressDetailsResponse>, AddressDetailsRequest>() {
+    override fun buildUseCaseObservable(params: AddressDetailsRequest?): Single<List<AddressDetailsResponse>> {
+    return api.getAddressDetails(params!!.placeFromId,params.placeToId)
     }
 }

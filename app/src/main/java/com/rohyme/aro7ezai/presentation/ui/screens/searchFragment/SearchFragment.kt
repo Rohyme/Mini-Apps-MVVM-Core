@@ -76,7 +76,7 @@ class SearchFragment : BaseFragmentWithInjector() {
             when(it){
                 is StateView.Success<*> ->{
                     searchBt.setState(StatesConstants.NORMAL_STATE)
-                    val data = it.data as AddressDetailsResponse
+                    val data = it.data as List<AddressDetailsResponse>
                     (activity as MainActivity).openDetailsFragment(data)
                 }
                 is StateView.Loading ->{
@@ -84,7 +84,7 @@ class SearchFragment : BaseFragmentWithInjector() {
                 }
                 is StateView.Empty ->{
                     searchBt.setState(StatesConstants.NORMAL_STATE)
-                    (activity as MainActivity).openDetailsFragment(AddressDetailsResponse())
+                    (activity as MainActivity).openDetailsFragment(listOf())
                 }
                 is StateView.Errors ->{
                     searchBt.setState(StatesConstants.NORMAL_STATE)
