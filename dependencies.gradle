@@ -1,0 +1,182 @@
+ext {
+    rxjava_version = "2.1.14"
+    rxAndroid_version = "2.0.2"
+    dagger2_version = "2.16"
+    retrofit_version = "2.3.0"
+    lifecycle_version = "1.1.1"
+    sizing_version = "1.0.5"
+    calligraphy_version = "2.3.0"
+    room_version = "1.1.1"
+    glide_version = "4.8.0"
+    rxKotlin_version = "2.3.0"
+    lifecycle_version = "1.1.1"
+    work_version = "1.0.0-beta03"
+    kotlin_version = "1.3.20"
+    support_version = "28.0.0"
+    constraint_version = "1.1.3"
+    paging_version = "1.0.0"
+    navigation_version="1.0.0-alpha11"
+
+
+
+    support = [
+            supportV4   : ('com.android.support:support-v4:' + support_version),
+            appCompat   : ('com.android.support:appcompat-v7:' + support_version),
+            cardView    : ('com.android.support:cardview-v7:' + support_version),
+            gridLayout  : ('com.android.support:gridlayout-v7:' + support_version),
+            recyclerView: ('com.android.support:recyclerview-v7:' + support_version),
+            design      : ('com.android.support:design:' + support_version),
+    ]
+
+    animation = [
+            // https://github.com/daimajia/AndroidViewAnimations
+            AndroidViewAnimations1: ('com.daimajia.easing:library:2.0@aar'),
+            AndroidViewAnimations2: ('com.daimajia.androidanimations:library:2.3@aar'),
+    ]
+    Charts = [
+            // https://github.com/PhilJay/MPAndroidChart
+            mpAndroidChart: ('com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'),
+
+            //https://github.com/lecho/hellocharts-android
+            helloCharts   : ('com.github.lecho:hellocharts-android:v1.5.8')
+    ]
+    dependencyInjection = [
+            // https://github.com/google/dagger
+            dagger2                : ('com.google.dagger:dagger-android:' + dagger2_version),
+            daggerSupport          : ('com.google.dagger:dagger-android-support:' + dagger2_version),
+            daggerAnnotationProcess: ('com.google.dagger:dagger-android-processor:' + dagger2_version),
+            daggerCompiler         : ('com.google.dagger:dagger-compiler:' + dagger2_version),
+    ]
+    imageLoading = [
+            // https://github.com/nostra13/Android-Universal-Image-Loader
+            androidUniversalLoader: ('com.nostra13.universalimageloader:universal-image-loader:1.9.5'),
+            // https://github.com/bumptech/glide
+            glide                 : ('com.github.bumptech.glide:glide' + glide_version),
+            glideProcessor        : ('com.github.bumptech.glide:compiler' + glide_version),
+
+            // https://github.com/square/picasso
+            picasso               : ('com.squareup.picasso:picasso:2.71828'),
+    ]
+
+    logging = [
+            // https://github.com/JakeWharton/timber
+            timber: ('com.jakewharton.timber:timber:4.7.1')
+    ]
+
+    networking = [
+            // https://square.github.io/retrofit
+            retrofit         : ('com.squareup.retrofit2:retrofit:' + retrofit_version),
+            retrofitRxAdapter: ('com.squareup.retrofit2:adapter-rxjava2:' + retrofit_version),
+            okhttp           : ('com.squareup.okhttp3:okhttp:3.10.0'),
+            interceptor      : ('com.squareup.okhttp3:logging-interceptor:3.11.0'),
+            // https://github.com/MindorksOpenSource/PRDownloader
+            prDownloader     : ('com.mindorks.android:prdownloader:0.5.0'),
+    ]
+
+    gson = [
+            gson         : ('com.google.code.gson:gson:2.8.2'),
+            gsonConverter: ('com.squareup.retrofit2:converter-gson:2.3.0')
+    ]
+
+    presistance = [
+            room          : ('android.arch.persistence.room:runtime:' + room_version),
+            roomAnnotation: ('android.arch.persistence.room:compiler:' + room_version),
+            roomRx2       : ('android.arch.persistence.room:rxjava2:' + room_version)
+    ]
+
+    rx = [
+            rxJava        : ('io.reactivex.rxjava2:rxjava:' + rxjava_version),
+            rxAndroid     : ('io.reactivex.rxjava2:rxandroid:' + rxAndroid_version),
+            subjectRelayRx: ('com.jakewharton.rxrelay2:rxrelay:2.0.0'),
+            //  https://github.com/ReactiveX/RxKotlin
+            rxKotlin      : ('io.reactivex.rxjava2:rxkotlin:' + rxKotlin_version),
+    ]
+
+    ui = [
+            constraintLayOut: ('com.android.support.constraint:constraint-layout:' + constraint_version),
+            // https://github.com/Tapadoo/Alerter
+            alerter         : ('com.tapadoo.android:alerter:4.0.0'),
+            //https://github.com/orhanobut/dialogplus
+            dialogPlus      : ('com.orhanobut:dialogplus:1.11@aar'),
+            materialDialogs : ('com.afollestad.material-dialogs:core:2.0.0-rc8'),
+            //https://github.com/Krupen/FabulousFilter
+            filterDialog    : ('com.allattentionhere:fabulousfilter:0.0.5'),
+            // https://github.com/aritraroy/Flashbar
+            flashBar        : ('com.andrognito.flashbar:flashbar:1.0.3'),
+            // https://github.com/GrenderG/Toasty
+            toasty          : ('com.github.GrenderG:Toasty:1.4.0'),
+            // https://github.com/KeepSafe/TapTargetView
+            tabTarget       : ('com.getkeepsafe.taptargetview:taptargetview:1.12.0'),
+            carbon          : ('tk.zielony:carbon:0.15.2'),
+            circleImageView : ('de.hdodenhof:circleimageview:2.2.0'),
+            customSpinner   : ('com.github.piotrek1543:CustomSpinner:0.1')
+    ]
+    sizing = [
+            viewSizing: ('com.intuit.sdp:sdp-android:' + sizing_version),
+            textSizing: ('com.intuit.ssp:ssp-android:' + sizing_version)
+    ]
+
+    font = [
+            fonts: ('uk.co.chrisjenx:calligraphy:' + calligraphy_version)
+    ]
+
+    // https://developer.android.com/topic/libraries/architecture/adding-components
+    lifeCycleArchComponent = [
+
+            // ViewModel and LiveData
+            viewLiveData      : ('android.arch.lifecycle:extensions:' + lifecycle_version),
+            // alternatively - justViewModel
+            viewModel         : ('android.arch.lifecycle:viewmodel:' + lifecycle_version),
+            // alternatively - just LiveData
+            liveData          : ('android.arch.lifecycle:livedata:' + lifecycle_version),
+
+            lifeCycle         : ('android.arch.lifecycle:runtime:' + lifecycle_version),
+
+            lifeCycleProcessor: ('android.arch.lifecycle:compiler:' + lifecycle_version), // use kapt for Kotlin
+            // alternately - if using Java8, use the following instead of compiler
+            lifeCycleJava8    : ('android.arch.lifecycle:common-java8:' + lifecycle_version),
+
+            // optional - ReactiveStreams support for LiveData
+            RsLiveData        : ('android.arch.lifecycle:reactivestreams:' + lifecycle_version),
+
+            // optional - testImplementation - Test helpers for LiveData
+            liveDataTest      : ('android.arch.core:core-testing:' + lifecycle_version)
+    ]
+
+    paging = [
+
+            paging       : ('android.arch.paging:runtime:' + paging_version),
+
+            // alternatively - without Android dependencies for testing
+            pagingTestImp: ('android.arch.paging:common:' + paging_version),
+
+            // optional - RxJava support
+            rxPaging     : ('android.arch.paging:rxjava2:' + paging_version)
+
+    ]
+
+    navigation = [
+            navigation  : ('android.arch.navigation:navigation-fragment-ktx:' + navigation_version),
+            navigationUi: ('android.arch.navigation:navigation-ui-ktx:' + navigation_version)
+    ]
+
+    workManager = [
+            workManager       : ('android.arch.work:work-runtime:' + work_version), // use -ktx for Kotlin+Coroutines
+
+            // optional - RxJava2 support
+            rxWorkManager     : ('android.arch.work:work-rxjava2:' + work_version),
+
+            // optional - Test helpers -androidTestImplementation
+            workManagerTestImp: ('android.arch.work:work-testing:' + work_version)
+    ]
+
+    kotlin = [
+            kotlinStdb: ('org.jetbrains.kotlin:kotlin-stdlib-jdk7:' + kotlin_version)
+    ]
+
+    pretty =[
+            list :('com.github.Rohyme:PrettyListView:2.0.0'),
+            state:('com.github.Tripl3Dev:PrettyStateView:2.2.1')
+    ]
+
+}
