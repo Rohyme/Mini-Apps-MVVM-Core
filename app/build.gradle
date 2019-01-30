@@ -35,6 +35,11 @@ android {
 
 
 dependencies {
+
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:2.2.2", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
     //Libs properties
     def supportLibs = rootProject.ext.support
     def dependencyInjectionLibs = rootProject.ext.dependencyInjection
@@ -53,6 +58,7 @@ dependencies {
     def navigationLibs = rootProject.ext.navigation
     def workManagerLibs = rootProject.ext.workManager
     def kotlinLibs = rootProject.ext.kotlin
+    def testLibs = rootProject.ext.testing
 
     //support
     implementation supportLibs.supportV4
@@ -106,6 +112,7 @@ dependencies {
     //prettyLibs
     implementation prettyLibs.list
     implementation prettyLibs.state
+    testImplementation testLibs.unitTest
 
 
 }
