@@ -109,6 +109,8 @@ dependencies {
     implementation navigationLibs.navigationUi
     //Kotlin
     implementation kotlinLibs.kotlinStdb
+    implementation kotlinLibs.ktx
+
     //prettyLibs
     implementation prettyLibs.list
     implementation prettyLibs.state

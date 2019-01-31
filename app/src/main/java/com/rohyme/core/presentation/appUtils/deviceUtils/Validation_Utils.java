@@ -16,7 +16,6 @@ public class Validation_Utils {
 //    dash, and/or underscore)
     static boolean isValidUsername(String userName) {
         return (userName.matches("^[a-zA-Z\u0621-\u0664\\s]{2,60}$"));
-
     }
 
     static boolean isValidUserName(String userName) {
@@ -55,8 +54,6 @@ public class Validation_Utils {
     }
 
     public static boolean isValidSadiPhone(String phone) {
-        //String reg="/^(009665|9665|\\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/";
-
         Pattern sPattern
                 = Pattern.compile("^(009665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$");
         return sPattern.matcher(phone).matches();

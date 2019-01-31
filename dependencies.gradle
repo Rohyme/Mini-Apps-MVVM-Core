@@ -172,7 +172,8 @@ ext {
     ]
 
     kotlin = [
-            kotlinStdb: ('org.jetbrains.kotlin:kotlin-stdlib-jdk7:' + kotlin_version)
+            kotlinStdb: ('org.jetbrains.kotlin:kotlin-stdlib-jdk7:' + kotlin_version),
+            ktx :('androidx.core:core-ktx:0.1')
     ]
 
     pretty =[
