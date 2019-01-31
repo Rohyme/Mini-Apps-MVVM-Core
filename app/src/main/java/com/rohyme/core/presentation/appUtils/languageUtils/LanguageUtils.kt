@@ -1,9 +1,10 @@
-package com.rohyme.core.presentation.appUtils.deviceUtils
+package com.rohyme.core.presentation.appUtils.languageUtils
 
 import android.annotation.TargetApi
 import android.content.Context
 import android.databinding.ObservableField
 import android.os.Build
+import com.rohyme.core.presentation.appUtils.deviceUtils.SharedPreferenceUtil
 import java.util.*
 import javax.inject.Inject
 import javax.inject.Singleton

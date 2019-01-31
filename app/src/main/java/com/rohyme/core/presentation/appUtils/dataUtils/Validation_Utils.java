@@ -1,4 +1,4 @@
-package com.rohyme.core.presentation.appUtils.deviceUtils;
+package com.rohyme.core.presentation.appUtils.dataUtils;
 
 import android.widget.EditText;
 import java.util.regex.Matcher;

@@ -1,4 +1,4 @@
-package com.rohyme.core.presentation.appUtils.deviceUtils;
+package com.rohyme.core.presentation.appUtils.dataUtils;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;

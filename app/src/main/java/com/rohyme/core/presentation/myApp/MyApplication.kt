@@ -4,10 +4,11 @@ import android.app.Application
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import com.rohyme.core.R
+import com.rohyme.core.presentation.appUtils.AssetsUtils.AssetsFiles
+import com.rohyme.core.presentation.appUtils.networkUtils.ConnectivityReciever
 import com.rohyme.core.presentation.appUtils.otherUtils.Constants
 import com.rohyme.core.presentation.appUtils.otherUtils.StateConstants.Companion.BUTTON_ERROR
 import com.rohyme.core.presentation.appUtils.otherUtils.StateConstants.Companion.BUTTON_LOADING
-import com.rohyme.core.presentation.appUtils.networkUtils.ConnectivityReciever
 import com.rohyme.core.presentation.di.components.ApplicationComponent
 import com.rohyme.core.presentation.di.components.DaggerApplicationComponent
 import com.rohyme.core.presentation.di.components.DaggerNetworkComponent
@@ -38,10 +39,9 @@ lateinit var networkComponent: NetworkComponent
 
     CalligraphyConfig.initDefault(
             CalligraphyConfig.Builder()
-                    .setDefaultFontPath("fonts/DroidKufi-Regular.ttf")
+                    .setDefaultFontPath(AssetsFiles.REGULAR_FONT)
                     .setFontAttrId(R.attr.fontPath)
                     .build())
-
     StatesConfigFactory.intialize()
             .initDefaultViews()
     StatesConfigFactory.get()

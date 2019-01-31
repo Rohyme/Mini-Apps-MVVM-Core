@@ -1,4 +1,4 @@
-package com.rohyme.core.presentation.appUtils.deviceUtils
+package com.rohyme.core.presentation.appUtils.languageUtils
 
 import android.annotation.TargetApi
 import android.content.Context

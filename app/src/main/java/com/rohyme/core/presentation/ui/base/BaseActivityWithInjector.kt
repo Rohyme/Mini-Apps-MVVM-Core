@@ -4,15 +4,11 @@ import android.annotation.SuppressLint
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
-import android.content.ContextWrapper
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.support.multidex.MultiDex
 import android.support.v7.app.AppCompatActivity
-import com.rohyme.core.presentation.appUtils.deviceUtils.LanguageUtils
-import com.rohyme.core.presentation.appUtils.deviceUtils.LocalizationUtils
-import com.rohyme.core.presentation.appUtils.deviceUtils.SharedPreferenceUtil
+import com.rohyme.core.presentation.appUtils.languageUtils.LanguageUtils
+import com.rohyme.core.presentation.appUtils.languageUtils.LocalizationUtils
 import com.rohyme.core.presentation.appUtils.networkUtils.NetworkUtils
 import com.rohyme.core.presentation.di.modules.ViewModelFactory
 import com.rohyme.core.presentation.myApp.MyApplication
