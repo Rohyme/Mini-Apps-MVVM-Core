@@ -2,10 +2,10 @@ package com.binarycase.saudiassociation.appUtils.deviceUtils;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.databinding.BindingAdapter;
-import android.support.annotation.IntDef;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.ViewUtils;
+import androidx.databinding.BindingAdapter;
+import androidx.annotation.IntDef;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.widget.ViewUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
-import com.binarycase.saudiassociation.R;
 import com.blankj.utilcode.util.KeyboardUtils;
 
 import java.lang.annotation.Retention;

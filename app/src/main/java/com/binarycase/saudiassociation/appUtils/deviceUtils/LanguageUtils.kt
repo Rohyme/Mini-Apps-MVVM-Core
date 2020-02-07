@@ -2,7 +2,7 @@ package com.binarycase.saudiassociation.appUtils.deviceUtils
 
 import android.annotation.TargetApi
 import android.content.Context
-import android.databinding.ObservableField
+import androidx.databinding.ObservableField
 import android.os.Build
 import java.util.*
 

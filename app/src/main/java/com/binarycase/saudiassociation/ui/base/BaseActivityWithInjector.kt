@@ -1,13 +1,13 @@
 package com.binarycase.saudiassociation.ui.base
 
 import android.annotation.SuppressLint
-import android.arch.lifecycle.ViewModel
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProviders
 import android.content.Context
-import android.databinding.Observable
+import androidx.databinding.Observable
 import android.os.Bundle
-import android.support.multidex.MultiDex
-import android.support.v7.app.AppCompatActivity
+import androidx.multidex.MultiDex
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import com.binarycase.saudiassociation.appUtils.deviceUtils.LanguageUtils
 import com.binarycase.saudiassociation.appUtils.networkUtils.NetworkUtils
