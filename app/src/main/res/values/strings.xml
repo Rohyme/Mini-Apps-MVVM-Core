@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SaudiAssociation</string>
+    <string name="app_name">Kotlin Trial</string>
     <string name="nav_home_screen_title">Home Screen</string>
     <string name="server_error">حدث خطأ ما يرجي اعادة المحاولة مرة اخري</string>
 </resources>
