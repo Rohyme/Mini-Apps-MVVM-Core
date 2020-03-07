@@ -8,6 +8,7 @@ plugins {
 
 
 android {
+    val baseUrl = "https://jsonplaceholder.typicode.com/"
     compileSdkVersion(MainAppVersions.compileSdk)
     defaultConfig {
         applicationId = APPLICATION_ID
@@ -23,6 +24,7 @@ android {
     }
     buildTypes {
         getByName("debug") {
+            buildConfigField("String","BASE_URL","\"$baseUrl\"")
             isMinifyEnabled = false
             isDebuggable = true
             applicationIdSuffix = ".debug"
@@ -30,6 +32,7 @@ android {
         }
 
         getByName("release") {
+            buildConfigField("String","BASE_URL","\"$baseUrl\"")
             isMinifyEnabled = true
             isMinifyEnabled = true
             isDebuggable = false
@@ -43,8 +46,13 @@ android {
     compileOptions {
         targetCompatibility = JavaVersion.VERSION_1_8
         sourceCompatibility = JavaVersion.VERSION_1_8
+
     }
 }
+
+  tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+      kotlinOptions.jvmTarget = "1.8"
+  }
 dependencies {
     implementation(AndroidSdkLibs.activity)
     implementation(AndroidSdkLibs.fragment)
@@ -72,20 +80,23 @@ dependencies {
     implementation(ThirdPartyLibs.retrofit)
     implementation(ThirdPartyLibs.retrofitRxAdapter)
     implementation(ThirdPartyLibs.okHttp)
-    implementation(ThirdPartyLibs.gson)
-    implementation(ThirdPartyLibs.gsonConverter)
+    implementation(ThirdPartyLibs.moshiConverter)
     implementation(ThirdPartyLibs.interceptor)
     implementation(ThirdPartyLibs.dagger2)
     kapt(ThirdPartyLibs.daggerAnnotationProcess)
     kapt(ThirdPartyLibs.daggerCompiler)
+    kapt(ThirdPartyLibs.assestedDaggerProcessor)
+    compileOnly(ThirdPartyLibs.assestedDaggerCompiler)
     implementation(ThirdPartyLibs.daggerSupport)
     implementation(ThirdPartyLibs.textSizing)
     implementation(ThirdPartyLibs.viewSizing)
     implementation(ThirdPartyLibs.fonts)
     implementation(ThirdPartyLibs.glide)
     kapt(ThirdPartyLibs.glideAnnotationProcess)
-    kapt(ThirdPartyLibs.circleImageView)
-    kapt(ThirdPartyLibs.prettyStateView)
+    implementation(ThirdPartyLibs.circleImageView)
+    implementation(ThirdPartyLibs.prettyStateView)
+
+    implementation(KotlinLibs.coroutines)
 }
 
 

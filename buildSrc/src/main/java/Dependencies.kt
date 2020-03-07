@@ -12,12 +12,15 @@ object ThirdPartyLibs {
     const val daggerSupport = "com.google.dagger:dagger-android-support:${ThirdPartyLibsVersions.daggerVersion}"
     const val daggerAnnotationProcess = "com.google.dagger:dagger-android-processor:${ThirdPartyLibsVersions.daggerVersion}"
     const val daggerCompiler = "com.google.dagger:dagger-compiler:${ThirdPartyLibsVersions.daggerVersion}"
+    const val assestedDaggerCompiler = "com.squareup.inject:assisted-inject-annotations-dagger2:${ThirdPartyLibsVersions.assestedDaggerVersion}"
+    const val assestedDaggerProcessor = "com.squareup.inject:assisted-inject-processor-dagger2:${ThirdPartyLibsVersions.assestedDaggerVersion}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${ThirdPartyLibsVersions.retrofitVersion}"
     const val retrofitRxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${ThirdPartyLibsVersions.retrofitVersion}"
     const val okHttp = "com.squareup.okhttp3:okhttp:${ThirdPartyLibsVersions.okHttpVersion}"
     const val interceptor = "com.squareup.okhttp3:logging-interceptor:${ThirdPartyLibsVersions.interceptorVersion}"
     const val gson = "com.google.code.gson:gson:${ThirdPartyLibsVersions.gsonVersion}"
     const val gsonConverter = "com.squareup.retrofit2:converter-gson:${ThirdPartyLibsVersions.gsonConverterVersion}"
+    const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${ThirdPartyLibsVersions.moshiConverterVersion}"
     const val viewSizing = "com.intuit.sdp:sdp-android:${ThirdPartyLibsVersions.sizingVersions}"
     const val textSizing = "com.intuit.ssp:ssp-android:${ThirdPartyLibsVersions.sizingVersions}"
     const val fonts = "uk.co.chrisjenx:calligraphy:${ThirdPartyLibsVersions.calligraphyVersions}"
@@ -26,7 +29,9 @@ object ThirdPartyLibs {
     const val circleImageView = "de.hdodenhof:circleimageview:${ThirdPartyLibsVersions.circleImageView}"
     const val prettyStateView = "com.github.Tripl3Dev:PrettyStateView:${ThirdPartyLibsVersions.prettyStateView}"
 }
-
+object KotlinLibs {
+    const val coroutines ="org.jetbrains.kotlinx:kotlinx-coroutines-core:${KotlinVersions.coroutinesVersion}"
+}
 object AndroidSdkLibs {
     const val activity = "androidx.activity:activity-ktx:${AndroidSdkVersions.activityVersion}"
     const val appCompat = "androidx.appcompat:appcompat:${AndroidSdkVersions.appCompatVersion}"
