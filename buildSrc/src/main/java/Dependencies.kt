@@ -1,25 +1,13 @@
-object AppGradleClassPathes {
-    const val kotlinClassPath = "org.jetbrains.kotlin:kotlin-gradle-plugin:${ClassAppVersions.kotlinVersion}"
-    const val gradleClassPath = "com.android.tools.build:gradle:${ClassAppVersions.gradleVersion}"
-    const val safeArgsClassPath = "androidx.navigation:navigation-safe-args-gradle-plugin:${ClassAppVersions.safeArgsVersion}"
-}
+
 
 object ThirdPartyLibs {
-    const val rxJava = "io.reactivex.rxjava2:rxjava:${ThirdPartyLibsVersions.rxJavaVersion}"
-    const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${ThirdPartyLibsVersions.rxAndroidVersion}"
-    const val subjectRelayRx = "com.squareup.retrofit2:converter-gson:${ThirdPartyLibsVersions.subjectRelayVersion}"
-    const val dagger2 = "com.google.dagger:dagger-android:${ThirdPartyLibsVersions.daggerVersion}"
-    const val daggerSupport = "com.google.dagger:dagger-android-support:${ThirdPartyLibsVersions.daggerVersion}"
-    const val daggerAnnotationProcess = "com.google.dagger:dagger-android-processor:${ThirdPartyLibsVersions.daggerVersion}"
-    const val daggerCompiler = "com.google.dagger:dagger-compiler:${ThirdPartyLibsVersions.daggerVersion}"
-    const val assestedDaggerCompiler = "com.squareup.inject:assisted-inject-annotations-dagger2:${ThirdPartyLibsVersions.assestedDaggerVersion}"
-    const val assestedDaggerProcessor = "com.squareup.inject:assisted-inject-processor-dagger2:${ThirdPartyLibsVersions.assestedDaggerVersion}"
+    const val daggerHilt = "com.google.dagger:hilt-android:${ThirdPartyLibsVersions.daggerHiltVersion}"
+    const val daggerHiltCompiler = "com.google.dagger:hilt-android-compiler:${ThirdPartyLibsVersions.daggerHiltVersion}"
+    const val daggerHiltWithLifeCycle = "androidx.hilt:hilt-lifecycle-viewmodel:${ThirdPartyLibsVersions.daggerLifeCycleVersion}"
+    const val daggerHiltProcessor = "androidx.hilt:hilt-compiler:${ThirdPartyLibsVersions.daggerLifeCycleVersion}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${ThirdPartyLibsVersions.retrofitVersion}"
-    const val retrofitRxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${ThirdPartyLibsVersions.retrofitVersion}"
     const val okHttp = "com.squareup.okhttp3:okhttp:${ThirdPartyLibsVersions.okHttpVersion}"
     const val interceptor = "com.squareup.okhttp3:logging-interceptor:${ThirdPartyLibsVersions.interceptorVersion}"
-    const val gson = "com.google.code.gson:gson:${ThirdPartyLibsVersions.gsonVersion}"
-    const val gsonConverter = "com.squareup.retrofit2:converter-gson:${ThirdPartyLibsVersions.gsonConverterVersion}"
     const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${ThirdPartyLibsVersions.moshiConverterVersion}"
     const val viewSizing = "com.intuit.sdp:sdp-android:${ThirdPartyLibsVersions.sizingVersions}"
     const val textSizing = "com.intuit.ssp:ssp-android:${ThirdPartyLibsVersions.sizingVersions}"
@@ -44,7 +32,6 @@ object AndroidSdkLibs {
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${AndroidSdkVersions.navigationVersion}"
     const val room = "androidx.room:room-runtime:${AndroidSdkVersions.roomVersion}"
     const val roomKtx = "androidx.room:room-ktx:${AndroidSdkVersions.roomVersion}"
-    const val roomRx = "androidx.room:room-rxjava2:${AndroidSdkVersions.roomVersion}"
     const val roomAnnotationProcess= "androidx.room:room-compiler:${AndroidSdkVersions.roomVersion}"
     const val saveState = "androidx.savedstate:savedstate:${AndroidSdkVersions.saveStateVersion}"
     const val paging = "androidx.paging:paging-runtime:${AndroidSdkVersions.pagingVersion}"

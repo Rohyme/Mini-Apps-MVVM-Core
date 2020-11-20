@@ -1,8 +1,9 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
-    kotlin("android.extensions")
+    id(TopLevelPlugins.androidApplication)
+    kotlin(TopLevelPlugins.kotlinAndroid)
+    kotlin(TopLevelPlugins.kotlinKapt)
+    id(TopLevelPlugins.updateDependencies)
+    id(TopLevelPlugins.daggerHilt)
 }
 
 
@@ -19,9 +20,9 @@ android {
         multiDexEnabled = true
         testInstrumentationRunner = TestLibs.testInstrumentationRunner
     }
-    dataBinding {
-        isEnabled = true
-    }
+    dataBinding.isEnabled = true
+    viewBinding.isEnabled = true
+
     buildTypes {
         getByName("debug") {
             buildConfigField("String","BASE_URL","\"$baseUrl\"")
@@ -46,7 +47,6 @@ android {
     compileOptions {
         targetCompatibility = JavaVersion.VERSION_1_8
         sourceCompatibility = JavaVersion.VERSION_1_8
-
     }
 }
 
@@ -64,7 +64,6 @@ dependencies {
     implementation(AndroidSdkLibs.paging)
     implementation(AndroidSdkLibs.room)
     implementation(AndroidSdkLibs.roomKtx)
-    implementation(AndroidSdkLibs.roomRx)
     kapt(AndroidSdkLibs.roomAnnotationProcess)
     implementation(AndroidSdkLibs.material)
     implementation(AndroidSdkLibs.navigationFragments)
@@ -73,21 +72,14 @@ dependencies {
     implementation(AndroidSdkLibs.workManagerRx)
     implementation(AndroidSdkLibs.recyclerView)
     implementation(AndroidSdkLibs.saveState)
-
-    implementation(ThirdPartyLibs.rxJava)
-    implementation(ThirdPartyLibs.rxAndroid)
-    implementation(ThirdPartyLibs.subjectRelayRx)
     implementation(ThirdPartyLibs.retrofit)
-    implementation(ThirdPartyLibs.retrofitRxAdapter)
     implementation(ThirdPartyLibs.okHttp)
     implementation(ThirdPartyLibs.moshiConverter)
     implementation(ThirdPartyLibs.interceptor)
-    implementation(ThirdPartyLibs.dagger2)
-    kapt(ThirdPartyLibs.daggerAnnotationProcess)
-    kapt(ThirdPartyLibs.daggerCompiler)
-    kapt(ThirdPartyLibs.assestedDaggerProcessor)
-    compileOnly(ThirdPartyLibs.assestedDaggerCompiler)
-    implementation(ThirdPartyLibs.daggerSupport)
+    implementation(ThirdPartyLibs.daggerHilt)
+    implementation(ThirdPartyLibs.daggerHiltWithLifeCycle)
+    kapt(ThirdPartyLibs.daggerHiltCompiler)
+    kapt(ThirdPartyLibs.daggerHiltProcessor)
     implementation(ThirdPartyLibs.textSizing)
     implementation(ThirdPartyLibs.viewSizing)
     implementation(ThirdPartyLibs.fonts)
@@ -95,7 +87,6 @@ dependencies {
     kapt(ThirdPartyLibs.glideAnnotationProcess)
     implementation(ThirdPartyLibs.circleImageView)
     implementation(ThirdPartyLibs.prettyStateView)
-
     implementation(KotlinLibs.coroutines)
 }
 
