@@ -9,7 +9,8 @@ buildscript {
         classpath(AppGradleClassPathes.gradleClassPath)
         classpath(AppGradleClassPathes.kotlinClassPath)
         classpath(AppGradleClassPathes.safeArgsClassPath)
-
+        classpath(AppGradleClassPathes.daggerHiltClassPath)
+        classpath(AppGradleClassPathes.dependenciesPlugin)
     }
 }
 
@@ -18,6 +19,7 @@ allprojects {
         google()
         jcenter()
         maven(url = uri("https://jitpack.io"))
+        maven(url = ("https://plugins.gradle.org/m2/"))
     }
 }
 

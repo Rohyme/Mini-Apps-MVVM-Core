@@ -4,11 +4,13 @@ import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ApplicationComponent
 
+@InstallIn(ApplicationComponent::class)
 @Module
 object MoshiModule {
 
-    @JvmStatic
     @Reusable
     @Provides
     fun providesMoshi(): Moshi {

@@ -7,21 +7,16 @@ import com.rohyme.core.R
 import com.rohyme.core.shared.appUtils.StateConstants.BUTTON_ERROR
 import com.rohyme.core.shared.appUtils.StateConstants.BUTTON_LOADING
 import com.rohyme.core.shared.appUtils.networkUtils.ConnectivityReciever
-import com.rohyme.core.shared.di.injectors.AppInjector
 import com.tripl3dev.prettystates.StatesConfigFactory
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasAndroidInjector
+import dagger.hilt.android.HiltAndroidApp
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
-import javax.inject.Inject
 
-class MyApplication : Application(), HasAndroidInjector {
+@HiltAndroidApp
+class MyApplication : Application() {
     private lateinit var networkDetector: ConnectivityReciever
-    @Inject
-    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 
     override fun onCreate() {
         super.onCreate()
-        AppInjector.init(this)
         networkDetector = ConnectivityReciever()
         val intent = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
         registerReceiver(networkDetector, intent)
@@ -46,6 +41,4 @@ class MyApplication : Application(), HasAndroidInjector {
         super.onTerminate()
         networkDetector.abortBroadcast()
     }
-
-    override fun androidInjector() = dispatchingAndroidInjector
 }

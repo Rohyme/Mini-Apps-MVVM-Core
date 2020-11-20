@@ -8,9 +8,12 @@ import com.rohyme.core.shared.appUtils.deviceUtils.SharedPreferenceUtil
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ApplicationComponent
 import javax.inject.Singleton
 
-@Module
+@InstallIn(ApplicationComponent::class)
+@Module(includes = [MoshiModule::class])
 object SharedPreferenceModule {
   @Singleton
   @Provides
@@ -20,7 +23,6 @@ object SharedPreferenceModule {
 
   @Singleton
   @Provides
-  @JvmStatic
   fun provideSharedPreferenceUtil(sharedPreference: SharedPreferences ,moshi : Moshi): SharedPreferenceUtil {
     return SharedPreferenceUtil(sharedPreference, moshi)
   }
